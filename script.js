@@ -36,23 +36,28 @@ equals.addEventListener("click", function(){
 
 
 function add(num1, num2) {
-    let total = parseInt(num1) + parseInt(num2);
+    let total = parseFloat(num1) + parseFloat(num2);
     display.textContent = total;
 }
 
 function subtract(num1, num2) {
-    let total = parseInt(num1) - parseInt(num2);
+    let total = Math.round((parseFloat(num1) - parseFloat(num2)) * 100) / 100;
     display.textContent = total;
 }
 
 function multiply(num1, num2) {
-    let total = parseInt(num1) * parseInt(num2);
+    let total = Math.round((parseFloat(num1) * parseFloat(num2)) * 100) / 100;
     display.textContent = total;
 }
 
 function divide (num1, num2) {
-    let total = parseInt(num1) / parseInt(num2);
-    display.textContent = total;
+    if(num2 === "0"){
+        alert("Don't do that, asshole")
+    } else {
+        let total = Math.round((parseFloat(num1) / parseFloat(num2)) * 100) / 100;
+        display.textContent = total;
+    }
+   
 }
 
 function operate (operator, num1, num2) {

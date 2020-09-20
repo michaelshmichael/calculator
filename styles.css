@@ -2,17 +2,17 @@ body {
     background: linear-gradient(to right, #3c3b3f, #605c3c);
 }
 
-#mainContainer{
+#mainContainer {
     width: 1000px;
     height: 750px;
-    margin-top: 150px;
+    margin-top: 90px;
     margin-left: auto;
     margin-right: auto;
     background-color: rgb(179, 179, 179);
     box-shadow: 15px 15px rgb(24, 24, 24)
 }
 
-#innerContainer{
+#innerContainer {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ body {
     background-color: rgb(146, 146, 146);
 }
 
-#display{
+#display {
     position: relative;
     width: 90%;
     height: 12%;
@@ -36,17 +36,19 @@ body {
     font-size: 3em;
     text-align: right;
     padding-right: 0.5em;
+    border: 2px solid black;
 }
 
-#inputButtons{
+#inputButtons {
     position: relative;
     width: 90%;
     height: 70%;
     left: 5%;
     background-color: rgb(63, 63, 63);
+    
 }
 
-#buttonContainer{
+#buttonContainer {
     position: relative;
     display: grid;
     grid-template-columns: 18% 18% 18% 18% 18%;
@@ -57,9 +59,10 @@ body {
     left: 8%;
     top: 10%;
     background-color: rgb(63, 63, 63);
+    
 }
 
-.numberButton, .operatorButton, .otherButton{
+.numberButton {
     background-color: rgb(226, 226, 226);
     font-family: 'Inconsolata', monospace;
     text-align: center;
@@ -67,6 +70,41 @@ body {
     width: 90%;
     padding-top: 15%;
     height: 100%;
+    border: 1px black solid;
+}
+
+.decimalButton {
+    background-color: rgb(226, 226, 226);
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    font-size: 2em;
+    width: 90%;
+    padding-top: 15%;
+    height: 100%;
+    border: 1px black solid;
+    outline: none;
+}
+
+.operatorButton {
+    background-color: rgb(250, 174, 74);
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    font-size: 2em;
+    width: 90%;
+    padding-top: 15%;
+    height: 100%;
+    border: 1px black solid;
+}
+
+.otherButton {
+    background-color: rgb(195, 106, 218);
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    font-size: 2em;
+    width: 90%;
+    padding-top: 15%;
+    height: 100%;
+    border: 1px black solid;
 }
 
 #equals {

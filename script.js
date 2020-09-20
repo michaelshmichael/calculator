@@ -3,25 +3,33 @@ const numbers = Array.from(document.getElementsByClassName("numberButton"));
 const operators = Array.from(document.getElementsByClassName("operatorButton"));
 const equals = document.getElementById("equals");
 const clear = document.getElementById("clear");
+const decimal = document.getElementById("decimal");
+const undo = document.getElementById("undo");
 
-//let displayValue = "0";
 let operatorValue = "";
 let num1 = "";
 let num2 = "";
-
-display.textContent = "0";
+let displayText = "";
 
 numbers.forEach(function(number){
     number.addEventListener("click", function(){
         if(operatorValue === "") {
-        num1 += number.textContent
-        display.textContent = num1;
+        num1 += number.textContent;
+        displayText = num1;
+        display.textContent = displayText;
         } else {
-        num2 += number.textContent
-        display.textContent = num1 + operatorValue + num2;
+        num2 += number.textContent;
+        displayText = num1 + operatorValue + num2;
+        display.textContent = displayText;
         }
     })
 })
+
+// undo.addEventListener("click", function(){
+//     //displayValue = display.textContent.split("");
+//     displayText = displayText.slice(0, -1);
+//     display.textContent = display.textContent.slice(0, -1);
+// })
 
 operators.forEach(function(operator){
     operator.addEventListener("click", function(){

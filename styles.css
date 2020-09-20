@@ -1,8 +1,15 @@
+body {
+    background: linear-gradient(to right, #3c3b3f, #605c3c);
+}
+
 #mainContainer{
     width: 1000px;
     height: 750px;
-    margin: 100px auto;
-    background-color: pink;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(179, 179, 179);
+    box-shadow: 15px 15px rgb(24, 24, 24)
 }
 
 #innerContainer{
@@ -14,7 +21,7 @@
     height: 90%;
     top: 5%;
     margin-left: 5%;
-    background-color: green;
+    background-color: rgb(146, 146, 146);
 }
 
 #display{
@@ -36,27 +43,41 @@
     width: 90%;
     height: 70%;
     left: 5%;
-    background-color: yellow;
+    background-color: rgb(63, 63, 63);
 }
 
 #buttonContainer{
     position: relative;
     display: grid;
-    grid-template-columns: 18% 18% 18% 18%;
+    grid-template-columns: 18% 18% 18% 18% 18%;
     grid-template-rows: 20% 20% 20% 20%;
-    grid-gap: 5% 5%;
+    grid-gap: 10px 10px;
     width: 90%;
     height: 90%;
-    left: 10%;
-    top: 7%;
-    background-color: yellow;
+    left: 8%;
+    top: 10%;
+    background-color: rgb(63, 63, 63);
 }
 
 .numberButton, .operatorButton, .otherButton{
-    background-color: blue;
+    background-color: rgb(226, 226, 226);
     font-family: 'Inconsolata', monospace;
     text-align: center;
     font-size: 2em;
-    padding-top: 0.5em;
-    border-radius: 10%;
+    width: 90%;
+    padding-top: 15%;
+    height: 100%;
+}
+
+#equals {
+    grid-column: 4/6;
+    grid-row: 4/5;
+    width: 95%;
+    padding-top: 5%;
+}
+
+#clear {
+    grid-column: 5/6;
+    grid-row: 2/4;
+    padding-top: 40%;
 }

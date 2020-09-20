@@ -1,0 +1,62 @@
+#mainContainer{
+    width: 1000px;
+    height: 750px;
+    margin: 100px auto;
+    background-color: pink;
+}
+
+#innerContainer{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    margin-left: 5%;
+    background-color: green;
+}
+
+#display{
+    position: relative;
+    width: 90%;
+    height: 12%;
+    top: 2%;
+    left: 5%;
+    background-color: white;
+    margin-bottom: 5%;
+    font-family: 'Inconsolata', monospace;
+    font-size: 3em;
+    text-align: right;
+    padding-right: 0.5em;
+}
+
+#inputButtons{
+    position: relative;
+    width: 90%;
+    height: 70%;
+    left: 5%;
+    background-color: yellow;
+}
+
+#buttonContainer{
+    position: relative;
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18%;
+    grid-template-rows: 20% 20% 20% 20%;
+    grid-gap: 5% 5%;
+    width: 90%;
+    height: 90%;
+    left: 10%;
+    top: 7%;
+    background-color: yellow;
+}
+
+.numberButton, .operatorButton, .otherButton{
+    background-color: blue;
+    font-family: 'Inconsolata', monospace;
+    text-align: center;
+    font-size: 2em;
+    padding-top: 0.5em;
+    border-radius: 10%;
+}

@@ -2,11 +2,14 @@ const display = document.getElementById("display");
 const numbers = Array.from(document.getElementsByClassName("numberButton"));
 const operators = Array.from(document.getElementsByClassName("operatorButton"));
 const equals = document.getElementById("equals");
+const clear = document.getElementById("clear");
 
-let displayValue = "";
+//let displayValue = "0";
 let operatorValue = "";
 let num1 = "";
 let num2 = "";
+
+display.textContent = "0";
 
 numbers.forEach(function(number){
     number.addEventListener("click", function(){
@@ -67,3 +70,9 @@ function operate (operator, num1, num2) {
     }
 }
 
+clear.addEventListener("click", function(){
+    display.textContent = "0";
+    operatorValue = "";
+    num1 = "";
+    num2 = "";
+})

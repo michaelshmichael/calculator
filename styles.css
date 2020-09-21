@@ -82,7 +82,7 @@ body {
     padding-top: 15%;
     height: 100%;
     border: 1px black solid;
-    outline: none;
+    outline: none !important;
 }
 
 .operatorButton {

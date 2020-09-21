@@ -40,9 +40,9 @@ if(operatorValue === ""){
 // entering operators into the display
 operators.forEach(function(operator){
     operator.addEventListener("click", function(){
-        decimal.disabled = false;
         operatorValue = operator.textContent;
         display.textContent = num1 + operatorValue;
+        decimal.disabled = false;
     })
 })
 

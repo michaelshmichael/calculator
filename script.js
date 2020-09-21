@@ -11,6 +11,8 @@ let num1 = "";
 let num2 = "";
 let displayText = "";
 
+
+
 numbers.forEach(function(number){
     number.addEventListener("click", function(){
         if(operatorValue === "") {
@@ -24,14 +26,12 @@ numbers.forEach(function(number){
 })
 
 decimal.addEventListener("click", function(){
-    if(operatorValue === "") {
+if(operatorValue === ""){
         num1 += decimal.textContent;
         display.textContent = num1;
-        decimal.disabled = true;
     } else {
         num2 += decimal.textContent;
         display.textContent = num1 + operatorValue + num2;
-        decimal.disabled = true;
     }   
 })
 
@@ -48,7 +48,7 @@ equals.addEventListener("click", function(){
         alert("Invalid, please check your input")
     } else {
     operate(operatorValue, num1, num2);
-    num1 = "";
+    num1 = display.textContent;
     num2 = "";
     operatorValue = "";
     decimal.disabled = false;
@@ -57,7 +57,9 @@ equals.addEventListener("click", function(){
 
 undo.addEventListener("click", function(){
     if(num2 != "") {
-        num2 = num2.slice(0, -1);
+        num2 = num2.slice(0, -1)
+        if(num2.indexOf(".") !=-1){
+        }
         display.textContent = num1 + operatorValue + num2;
     } else if(operatorValue != ""){
         operatorValue === "";
@@ -66,6 +68,9 @@ undo.addEventListener("click", function(){
         num1 = num1.slice(0, -1);
         display.textContent = num1;
     }
+    // if(num1.indexOf(".") === -1){
+    //     decimal.disabled = true;
+    // }
 })
 
 function operate (operator, num1, num2) {
@@ -87,6 +92,8 @@ function add(num1, num2) {
     let total = parseFloat(num1) + parseFloat(num2);
     display.textContent = total;
 }
+
+
 
 function subtract(num1, num2) {
     let total = Math.round((parseFloat(num1) - parseFloat(num2)) * 100) / 100;
